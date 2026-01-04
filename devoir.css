@@ -1,0 +1,110 @@
+:root{
+  --bg:#f7f9fc;
+  --card:#ffffff;
+  --accent:#0b5fff;
+  --error:#d9534f;
+  --muted:#6b7280;
+}
+
+*{box-sizing:border-box}
+
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+  background:var(--bg);
+  margin:0;
+  padding:2rem;
+  color:#111827;
+}
+
+.container{
+  max-width:520px;
+  margin:0 auto;
+  background:transparent;
+  padding:1rem;
+  border-radius:0;
+  border:1px solid #eef2f6;
+}
+
+h1 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.1rem;
+  font-weight:600;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+input[type="text"] {
+  padding: 0.45rem 0.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  font-size: 0.98rem;
+}
+
+input[aria-invalid="true"] {
+  border-color: var(--error);
+  box-shadow: 0 0 0 3px rgba(217, 83, 79, 0.06);
+}
+
+button#calcBtn {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  padding: 0.45rem 0.75rem;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.4rem;
+}
+
+button#calcBtn:active {
+  transform: translateY(1px);
+}
+
+.error {
+  color: var(--error);
+  font-size: 0.875rem;
+  margin-top: 0.35rem;
+  min-height: 1.1rem;
+}
+
+.results {
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e6edf8;
+}
+
+.output p {
+  margin: 0.35rem 0;
+  padding: 0.15rem 0;
+}
+
+.output .placeholder {
+  color: var(--muted);
+}
+
+.output .error {
+  color: var(--error);
+  font-weight: 600;
+}
+
+strong {
+  display: inline;
+  font-weight:600;
+  margin-right:0.5rem;
+}
+
+@media (max-width: 520px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
